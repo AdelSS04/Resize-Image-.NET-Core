@@ -1,11 +1,22 @@
-How to resize images in .NET Core using C#
+# How to resize images in .NET Core using C#
+Since Microsoft has released [System.Drawing.Common](https://www.nuget.org/packages/System.Drawing.Common) to provide access to GDI+ graphics functionality across cross-platform, i am using the same to resize the images.
 
-Since Microsoft has released System.Drawing.Common to provide access to GDI+ graphics functionality across cross-platform, 
-i am using this to resize the images.
+In this example, i have implemented two methods to resize the images. 
 
-This is a simple example, how to resize the image to specified size and specified format. Implemented two methods in this; 
+**Resize(string filePath, int width, int height)** 
+This will resize the image to the specified width and height without maintining the aspect ratio, and it will be saved in **.png** format in the same file path.
 
-1. Resize image to specified size
-2. Resize image to specified size by maintatining aspect ratio of image.
+**ResizeImageWithAspectRatio(string filePath, int width, int height)**
+This will resize the image to the specified width and height by maintining the aspect ratio, and it will be saved in **.png** format in the same file path.
 
-This .NET Core app runs in both Windows and Linux.
+
+You can run the example using below command.
+
+```
+dotnet run C:\Pictures\IMG_0845.jpg 128 128
+```
+
+**This .NET Core app runs in both Windows and Linux.**
+
+## Contributing
+Pull requests are welcome.
